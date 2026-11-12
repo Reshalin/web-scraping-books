@@ -1,10 +1,10 @@
-#  Book Information Web Scraper Using Python
+#  Book Information Web Scraper & ETL Pipeline
 
 ## 1. Project Description
 
-This is a beginner-friendly web scraping project developed using Python.
+This project is developed using Python to extract book information from a website, transform the collected data and store it in CSV files.
 
-It extracts book information from the Books to Scrape website and stores the collected information in a CSV file.
+It demonstrates basic Web Scraping and ETL (Extract, Transform, Load) concepts used in Data Engineering.
 
 ## 2. Technologies Used
 
@@ -12,6 +12,8 @@ It extracts book information from the Books to Scrape website and stores the col
 - Requests
 - BeautifulSoup
 - CSV
+- Visual Studio Code
+- GitHub
 
 ## 3. Project Features
 
@@ -19,20 +21,39 @@ It extracts book information from the Books to Scrape website and stores the col
 - Extract book prices.
 - Extract book ratings.
 - Extract book availability.
-- Store extracted information in a CSV file.
+- Clean and transform extracted data.
+- Convert book prices into numerical values.
+- Convert ratings into numerical values.
+- Store processed data in CSV files.
 
-## 4. Website Used
+## 4. ETL Pipeline
 
-https://books.toscrape.com/
+### Extract
+Collect book information from the Books to Scrape website using Python and BeautifulSoup.
+
+### Transform
+Clean the extracted information, remove unwanted characters and convert prices and ratings into numerical formats.
+
+### Load
+Save the transformed data into `books_etl.csv`.
 
 ## 5. Project Files
 
-- `scraper.py` – Python web scraping program.
-- `books.csv` – Extracted book information.
-- `requirements.txt` – Required Python libraries.
-- `.gitignore` – Files excluded from Git tracking.
+| File | Description |
+|---|---|
+| scraper.py | Basic web scraping program |
+| etl_scraper.py | ETL pipeline implementation |
+| books.csv | Original scraped data |
+| books_etl.csv | Cleaned and transformed data |
+| requirements.txt | Required Python libraries |
+| README.md | Project documentation |
+| .gitignore | Ignored files configuration |
 
-## 6. Installation
+## 6. Website Used
+
+https://books.toscrape.com/
+
+## 7. Installation
 
 Install the required libraries:
 
@@ -40,30 +61,29 @@ Install the required libraries:
 pip install -r requirements.txt
 ```
 
-## 7. How to Run
+## 8. How to Run
 
-1. Download or clone this repository.
-2. Open the project folder in VS Code.
-3. Open the terminal.
-4. Run the following command:
+Run the basic scraper:
 
 ```bash
 python scraper.py
 ```
 
-5. The extracted information will be saved in `books.csv`.
+Run the ETL pipeline:
 
-## 8. Output
+```bash
+python etl_scraper.py
+```
 
-The CSV file contains:
+## 9. Output
 
-- Book Title
-- Price
-- Rating
-- Availability
+The project generates two CSV files:
 
-**Note:** This version extracts books from the website's first page.
+- `books.csv` – Original scraped book information.
+- `books_etl.csv` – Cleaned and transformed book information.
 
-## 9. Conclusion
+## 10. Conclusion
 
-This project demonstrates the basic concepts of web scraping using Python, Requests and BeautifulSoup.
+This project helped me understand Python programming, web scraping, data cleaning, CSV handling and the fundamentals of ETL pipelines in Data Engineering.
+
+**Note:** The current implementation extracts books from the first page of the website.
