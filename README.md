@@ -1,4 +1,4 @@
-# 📚 Book Information Web Scraper Using Python
+#  Book Information Web Scraper Using Python
 
 ## 1. Project Description
 
